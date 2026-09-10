@@ -14,8 +14,8 @@ public class MachineComposite extends MachineComponent{
 
     public int getMachineCount(){
         int machineCount = 0;
-        for(int i = 0; i<components.size(); i++){
-            machineCount += (components.get(i)).getMachineCount();
+        for (MachineComponent component : components) {
+            machineCount += component.getMachineCount();
         }
 
         return machineCount;
